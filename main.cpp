@@ -17,8 +17,14 @@ Fruit* createFruit(string name)
     return fruit_ptr;
 }
 
-... deleteFruit(...) {
-    //deallocate space taken by the Fruit pointer that points to a Fruit object
+/*
+ *deleteFruit()
+ *This function takes a Fruit pointer (that points to a Fruit object) and deallocates it's memory. 
+ *It returns nothing (void).
+ */
+void deleteFruit(Fruit* pointer) {
+    delete pointer;
+    pointer = nullptr;
 }
 
 ... createEmptyFruitArray(int num) {
