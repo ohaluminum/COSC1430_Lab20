@@ -22,7 +22,8 @@ Fruit* createFruit(string name)
  *This function takes a Fruit pointer (that points to a Fruit object) and deallocates it's memory. 
  *It returns nothing (void).
  */
-void deleteFruit(Fruit* ptr) {
+void deleteFruit(Fruit* ptr) 
+{
     delete ptr;
     ptr = nullptr;
 }
@@ -32,7 +33,8 @@ void deleteFruit(Fruit* ptr) {
  *This function initializes a new Fruit pointer and allocates a new dynamic Fruit array to it. 
  *The size of the new array is num. Make sure to return the new pointer!
  */
-Fruit* createEmptyFruitArray(int num) {
+Fruit* createEmptyFruitArray(int num) 
+{
     Fruit* ptr = new Fruit[num];
 
     return ptr;
@@ -43,7 +45,8 @@ Fruit* createEmptyFruitArray(int num) {
  *This function takes a Fruit pointer (that points to a Fruit array) and deallocates it's memory. 
  *It returns nothing.
  */
-void deleteFruitArray(Fruit* ptr_arr) {
+void deleteFruitArray(Fruit* ptr_arr) 
+{
     delete[] ptr_arr;
     ptr_arr = nullptr;
 }
