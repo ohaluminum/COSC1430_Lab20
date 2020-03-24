@@ -12,9 +12,9 @@ using namespace std;
  */
 Fruit* createFruit(string name) 
 {
-    Fruit* fruit_ptr = new Fruit(name);
+    Fruit* ptr = new Fruit(name);
 
-    return fruit_ptr;
+    return ptr;
 }
 
 /*
@@ -22,17 +22,29 @@ Fruit* createFruit(string name)
  *This function takes a Fruit pointer (that points to a Fruit object) and deallocates it's memory. 
  *It returns nothing (void).
  */
-void deleteFruit(Fruit* pointer) {
-    delete pointer;
-    pointer = nullptr;
+void deleteFruit(Fruit* ptr) {
+    delete ptr;
+    ptr = nullptr;
 }
 
-... createEmptyFruitArray(int num) {
-    //create a new fruit array of length num and return it's pointer
+/*
+ *createEmptyFruitArray(int num)
+ *This function initializes a new Fruit pointer and allocates a new dynamic Fruit array to it. 
+ *The size of the new array is num. Make sure to return the new pointer!
+ */
+Fruit* createEmptyFruitArray(int num) {
+    Fruit* ptr = new Fruit[num];
+
+    return ptr;
 }
 
+/*
+ *deleteFruitArray( … )
+ *This function takes a Fruit pointer (that points to a Fruit array) and deallocates it's memory. 
+ *It returns nothing.
+ */
 void deleteFruitArray(Fruit* ptr_arr) {
-    //deallocate space taken by the Fruit pointer that points to a Fruit array
+   
 }
 
 //The code here is for testing to see if the program run without errors when the 4 functions are used
