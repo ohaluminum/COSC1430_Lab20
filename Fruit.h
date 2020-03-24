@@ -16,10 +16,7 @@ public:
     Fruit(string);
     void setName(string);
     string getName();
-    ~Fruit() 
-    {
-        setName("deleted");
-    }
+    ~Fruit() { setName("deleted"); }
     void operator delete(void* ptr) {/*do nothing for debug purpose*/ };
 };
 

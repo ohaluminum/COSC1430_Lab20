@@ -3,8 +3,18 @@
 
 using namespace std;
 
-... createFruit(...) {
-    //create a new Fruit pointer, and make a new Fruit object, then return the pointer
+/*
+ *createFruit(string name)
+ *This function takes in a string argument, 
+ *initialize a Fruit pointer, 
+ *dynamically allocates a new Fruit object, 
+ *and return that new pointer.
+ */
+Fruit* createFruit(string name) 
+{
+    Fruit* fruit_ptr = new Fruit(name);
+
+    return fruit_ptr;
 }
 
 ... deleteFruit(...) {
