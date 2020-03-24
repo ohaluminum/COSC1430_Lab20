@@ -44,7 +44,8 @@ Fruit* createEmptyFruitArray(int num) {
  *It returns nothing.
  */
 void deleteFruitArray(Fruit* ptr_arr) {
-   
+    delete[] ptr_arr;
+    ptr_arr = nullptr;
 }
 
 //The code here is for testing to see if the program run without errors when the 4 functions are used
